@@ -4,6 +4,7 @@
 /* Shared Styles */
 * {
   font-family: "Work Sans", serif;
+  margin: 0;
 }
 
 .btn-primary{
@@ -32,7 +33,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.nav-title{
+.section-title{
     font-size: 2.8rem;
     font-weight: 700;
     color: #131313;
@@ -74,20 +75,20 @@ main{
     margin: 5rem auto;
 }
 
-/* Feature Section */
-.feature{
+/* team-feature Section */
+.team-feature{
     display: flex;
     align-items: center;
 }
-.feature-img{
+.team-feature-img{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 1.5rem;
 }
-.feature-content{
+.team-feature-content{
     padding-left: 3rem;
 }
-feature-title{
+team-feature-title{
     font-size: 2.8rem;
 
 }
@@ -95,25 +96,133 @@ feature-title{
     color: #727272;
     font-weight: 500;
 }
-.text-feature{
+.text-team-feature{
     color: #FF900E;
     font-weight: 700;
 }
+/* Features Section Styles */
+.features{
+    display: flex;
+    margin-top: 8rem;
+    gap: 6.25rem;
+}
+.features .section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.feature-content .card{
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(0,0,0,0.06);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.ten-years-badge{
+    background-color: #FF900E;
+    border-radius: 8px;
+    color: #FFF;
+    padding: 40px;
+    text-align: center;
+    width: 280px;
+    position: relative;
+    bottom: 100px;
+}
+.ten-years-badge h2{
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+.ten-years-badge p{
+    font-size: 1.5rem;
+}
+.feature-img img{
+    margin-left: 90px;
+}
 
+/* facts card styles */
+
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 0 30px;
+    padding-top: 50px;
+    padding-bottom:20px;
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+.facts-card-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* sponsors styles */
+.sponsors{
+    text-align: center;
+    margin-top: 150px;
+}
+.sponsors-img-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    gap: 20px;
+}
+.sponsors .section-title{
+    margin-bottom: 30px;
+}
+
+/* Footer Section Styles */
+.footer{
+    background-color: rgba(255, 144, 14, 0.10);
+    text-align: center;
+    margin: 5rem auto;
+    width: 90rem;
+    height: 6.25rem;
+    
+}
+.footer p{
+    font-size: 1.2rem;
+    padding: 40px 0;
+    font-weight: 500;
+}
 
 /* For Mobile Devices or small devices */
 @media screen and (max-width: 576px) {
     header{
         padding: 20px;
     }
-    nav, .feature{
+    nav, .team-feature, .facts-card-container, .sponsors-img-container, .features{
         flex-direction: column;
     }
-    .feature-img{
+    .team-feature-img{
         grid-template-columns: 1fr;
     }
-    .feature-content{
+    .team-feature-content{
         padding-left: 1rem;
+    }
+    .feature-img img{
+        width: 100%;
+        margin-left: 0;
+    }
+    .facts-card-container{
+        gap: 1.25rem;
+    }
+    .sponsors-img-container{
+        align-items: center;
+        gap: 30px;
+    }
+    .sponsors-img-container img{
+        width: 150px;
     }
 
 }
@@ -123,13 +232,25 @@ feature-title{
     header{
         padding: 80px;
     }
-    nav, .feature{
+    nav, .team-feature, .sponsors-img-container{
         flex-direction: column;
     }
-    .feature-img{
+    .team-feature-img{
         grid-template-columns: 1fr;
     }
-    .feature-content{
+    .team-feature-content{
         padding-left: 1.5rem;
+    }
+    .facts-card-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px; 
+    }
+    .sponsors-img-container{
+        align-items: center;
+        gap: 30px;
+    }
+    .sponsors-img-container img{
+        width: 160px;
     }
 }

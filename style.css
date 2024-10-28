@@ -224,6 +224,9 @@ team-feature-title{
     .sponsors-img-container img{
         width: 150px;
     }
+    .footer{
+        width: 350px;
+    }
 
 }
 
@@ -232,7 +235,7 @@ team-feature-title{
     header{
         padding: 80px;
     }
-    nav, .team-feature, .sponsors-img-container{
+    nav, .team-feature, .sponsors-img-container, .features{
         flex-direction: column;
     }
     .team-feature-img{
@@ -252,5 +255,8 @@ team-feature-title{
     }
     .sponsors-img-container img{
         width: 160px;
+    }
+    .footer{
+        width: 550px;
     }
 }
